@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="element header"></div>
+  <div class="element metrics"></div>
+  <div class="element controls"></div>
+  <div class="element receipt">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Recibos</th>
+          <th>Número de Recibos</th>
+          <th>Fecha de Subida</th>
+          <th>Usuario</th>
+          <th>Estado</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recibo of gruposRecibo">
+          <td><input type="checkbox"/></td>
+          <td>{{recibo.nombre}}</td>
+          <td>{{recibo.numeroRecibos}}</td>
+          <td>{{recibo.fechaSubida}}</td>
+          <td>{{recibo.usuario}}</td>
+          <td>{{recibo.estado.descripcion}}</td>
+          <td><button (click)="detalle(recibo.id)">detalle</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

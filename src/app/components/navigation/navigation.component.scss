@@ -1,0 +1,11 @@
+.nav-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: aquamarine;
+  justify-content: center;
+  .nav-item{
+    padding: 5px;
+  }
+}

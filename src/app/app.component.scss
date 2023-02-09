@@ -1,0 +1,11 @@
+.app{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  .nav{
+    height: 100vh;
+  }
+  .body{
+    width: 100%;
+  }
+}
