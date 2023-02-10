@@ -1,8 +1,7 @@
-import { RecibosdetalleComponent } from './pages/recibosdetalle/recibosdetalle.component';
-import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
-import { ReportesComponent } from './pages/reportes/reportes.component';
-import { EmpresasComponent } from './pages/empresas/empresas.component';
-import { RecibosComponent } from './pages/recibos/recibos.component';
+import { RecibosAgregarEditarComponent } from './modules/recibosagregareditar/recibosagregareditar.component';
+import { ConfiguracionComponent } from './modules/configuracion/configuracion.component';
+import { ReportesComponent } from './modules/reportes/reportes.component';
+import { EmpresasComponent } from './modules/empresas/empresas.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes  } from '@angular/router';
 
@@ -11,6 +10,7 @@ const routesValues = {
   ROUTE_RECIBOS:"recibos",
   ROUTE_REPORTES:"reportes",
   ROUTE_CONFIGURACION:"configuracion",
+  ROUTE_AGREGAR_EDITAR_RECIBOS:"agregar"
 };
 const routes: Routes = [
   {
@@ -24,11 +24,11 @@ const routes: Routes = [
   },
   {
     path:routesValues.ROUTE_RECIBOS,
-    component:RecibosComponent
+    loadChildren:()=>import('./modules/recibos/recibos.module').then(m => m.ReciboModule)
   },
   {
-    path:routesValues.ROUTE_RECIBOS+"/:id",
-    component:RecibosdetalleComponent
+    path:routesValues.ROUTE_AGREGAR_EDITAR_RECIBOS,
+    component:RecibosAgregarEditarComponent
   },
   {
     path:routesValues.ROUTE_REPORTES,

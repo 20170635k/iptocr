@@ -2,14 +2,14 @@ import { AppRoutingModule } from './../../app.routes';
 import { Component, OnInit } from '@angular/core';
 import {  IGrupoReciboResponse } from 'src/app/interfaces/recibo.interface';
 import {Router,ActivatedRoute} from "@angular/router"
-
 @Component({
-  selector: 'app-recibos',
-  templateUrl: './recibos.component.html',
-  styleUrls: ['./recibos.component.scss']
+  selector: 'app-recibosagregareditar',
+  templateUrl: './recibosagregareditar.component.html',
+  styleUrls: ['./recibosagregareditar.component.scss']
 })
-export class RecibosComponent implements OnInit {
+export class RecibosAgregarEditarComponent implements OnInit {
 
+  addEditRoute:string = AppRoutingModule.ROUTES_VALUES.ROUTE_AGREGAR_EDITAR_RECIBOS
 
   gruposRecibo:IGrupoReciboResponse[]//DATABASE
   constructor(

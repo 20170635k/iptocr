@@ -1,0 +1,49 @@
+$padding-spaces:10px; // gap and padding
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: $padding-spaces;
+  // padding: 10px;
+  // width: calc(100% - 20px);
+  width: 100%;
+  padding-top: 2*$padding-spaces;
+
+  .header{
+    background-color: aqua;
+    width: 100%;
+    height: 80px;
+  }
+
+  .metrics{
+    background-color: rgb(0, 255, 13);
+    width: 100%;
+    height: 100px;
+  }
+
+  .controls{
+    background-color: aquamarine;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-spaces;
+    width: calc(100% - 2*$padding-spaces) ;
+    .actions{
+      display: flex;
+      flex-direction: row;
+      gap: $padding-spaces;
+      .action{
+        height: 40px;
+      }
+    }
+  }
+
+  .table{
+    background-color: rgb(177, 216, 187);
+    width: 100%;
+    height:auto;
+  }
+
+}
