@@ -9,6 +9,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReciboRoutingModule } from './recibos.routes';
 import { CommonModule } from '@angular/common';
 import { DragdropfilesComponent } from './components/dragdropfiles/dragdropfiles.component';
+import { ArchivomodalComponent } from './components/archivomodal/archivomodal.component';
+import { ConfirmationmodalComponent } from './components/confirmationmodal/confirmationmodal.component';
 
 
 
@@ -19,6 +21,8 @@ import { DragdropfilesComponent } from './components/dragdropfiles/dragdropfiles
     AgregareditarComponent,
     ListarComponent,
     DragdropfilesComponent,
+    ArchivomodalComponent,
+    ConfirmationmodalComponent
   ],
   imports: [
     CommonModule,

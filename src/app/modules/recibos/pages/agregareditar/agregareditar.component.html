@@ -4,7 +4,7 @@
   <div class="element controls">
     <div class="title">Recibos Subidos</div>
     <div class="actions">
-      <button class="action export csv">Subir Recibos </button>
+      <button class="action export csv" (click)="open()">Subir Recibos </button>
       <button class="action add receipts">Subir Grupo</button>
     </div>
   </div>
@@ -13,8 +13,8 @@
       <thead>
         <tr>
           <th></th>
-          <th>Recibos</th>
-          <th>Número de Recibos</th>
+          <th>Recibo</th>
+          <th>Empresa</th>
           <th>Fecha de Subida</th>
           <th>Usuario</th>
           <th>Estado</th>
@@ -25,7 +25,7 @@
         <tr *ngFor="let recibo of gruposRecibo">
           <td><input type="checkbox"/></td>
           <td>{{recibo.nombre}}</td>
-          <td>{{recibo.numeroRecibos}}</td>
+          <td>{{recibo.empresa.nombre}}</td>
           <td>{{recibo.fechaSubida}}</td>
           <td>{{recibo.usuario}}</td>
           <td>{{recibo.estado.descripcion}}</td>
@@ -35,4 +35,5 @@
     </table>
   </div>
 </div>
-<app-dragdropfiles></app-dragdropfiles>
+<app-archivomodal></app-archivomodal>
+

@@ -1,0 +1,16 @@
+<ng-container *ngIf="display$ | async as display">
+    <section [class.open]="display === 'open'"
+             (click)="close()">
+      <div (click)="$event.stopPropagation()">
+        <button class="close"
+                type="button" 
+                (click)="close()">X</button>
+  
+        ¿Esta seguro que desea subir estos archivos?
+        <button (click)="close()">
+          No, aun no
+        </button>
+        <button (click)="upload()">Sí, estoy seguro</button>
+      </div>
+    </section>
+  </ng-container>

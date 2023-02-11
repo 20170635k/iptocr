@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AgregarrecibosComponent } from './modules/agregarrecibos/agregarrecibos.component';
 import { CommonModule } from '@angular/common';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     NavigationComponent,
     RecibosAgregarEditarComponent,
     AgregarrecibosComponent,
+  
 
   ],
   imports: [

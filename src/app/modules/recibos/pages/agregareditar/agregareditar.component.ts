@@ -1,7 +1,8 @@
 import { ReciboRoutingModule } from '../../recibos.routes';
 import { Component, OnInit } from '@angular/core';
-import {  IGrupoReciboResponse } from 'src/app/interfaces/recibo.interface';
+import {  IReciboResponse } from 'src/app/interfaces/recibo.interface';
 import {Router,ActivatedRoute} from "@angular/router"
+import { ModalService } from '../../components/archivomodal/modal.service';
 
 @Component({
   selector: 'app-agregareditar',
@@ -10,18 +11,25 @@ import {Router,ActivatedRoute} from "@angular/router"
 })
 export class AgregareditarComponent implements OnInit {
 
-  gruposRecibo:IGrupoReciboResponse[]//DATABASE
+  gruposRecibo:IReciboResponse[]//DATABASE
   constructor(
     private router:Router,
-    private activatedRoute:ActivatedRoute
+    private activatedRoute:ActivatedRoute, 
+    private modalService: ModalService
   ) {
     this.gruposRecibo = [
       {
         id:1,
-        nombre: 'Grupo 01',
-        numeroRecibos: 1,
+        nombre: 'Recibo de Luz 01',
+        empresa: {
+            id:1,
+            nombre:'ENEL',
+            ruc:'RucENEL',
+            codigo:'enel'
+          },
         fechaSubida: '7/2/2023',
         usuario: 'Juan',
+        fechaProcesamiento: '1/1/2023',
         estado: {
           id:1,
           descripcion:"Procesado"
@@ -29,10 +37,16 @@ export class AgregareditarComponent implements OnInit {
       },
       {
         id:2,
-        nombre: 'Grupo 02',
-        numeroRecibos: 3,
+        nombre: 'Recibo de Luz 02',
+        empresa: {
+          id:1,
+          nombre:'ENEL',
+          ruc:'RucENEL',
+          codigo:'enel'
+        },
         fechaSubida: '7/2/2023',
         usuario: 'Juan',
+        fechaProcesamiento: '1/1/2023',
         estado: {
           id:1,
           descripcion:"Procesado"
@@ -47,6 +61,10 @@ export class AgregareditarComponent implements OnInit {
 
   detalle(id:number){
 
+  }
+
+  open() {
+    this.modalService.open();
   }
 
 }

@@ -11,6 +11,7 @@ export interface IReciboResponse{
   nombre:string,
   empresa:IEmpresaResponse,
   fechaSubida:string,
+  usuario?:String,
   fechaProcesamiento:string,
   estado: IEstadoRecibo
 }
