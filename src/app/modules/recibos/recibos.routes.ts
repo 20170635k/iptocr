@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes  } from '@angular/router';
 
 const routesValues = {
-  ROUTE_LISTAR:"listar",
+  ROUTE_LISTAR:"",
   ROUTE_AGREGAR:"agregar",
   ROUTE_EDITAR:"",
 };
@@ -15,11 +15,7 @@ const routes: Routes = [
     path:'',
     component:BodyComponent,
     children:[
-      {
-        path:'',
-        redirectTo:routesValues.ROUTE_LISTAR,
-        pathMatch:"full"
-      },
+
       {
         path:routesValues.ROUTE_LISTAR,
         component:ListarComponent

@@ -9,3 +9,8 @@ export interface IEmpresaResponse{
   ruc:string,
   codigo:string
 }
+
+export enum Mascotas{
+  PERRO = "PERRO",
+  GATO = "GATO"
+}

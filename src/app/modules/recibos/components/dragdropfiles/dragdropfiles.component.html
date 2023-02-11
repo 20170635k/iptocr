@@ -2,7 +2,7 @@
   <form [formGroup]="form">
     <div class="row">
       <!-- Progress Bar -->
-      <!-- <div class="col-md-12" *ngIf="progress">
+      <div class="col-md-12" *ngIf="progress">
         <div class="progress form-group">
           <div
             class="progress-bar progress-bar-striped bg-success"
@@ -28,11 +28,11 @@
             multiple
           />
         </div>
-      </div> -->
+      </div>
       <div class="col-md-12">
         <div class="image-list" *ngFor="let file of files; let i = index">
           <div class="profile">
-            <img [src]="sanitize('../../../assets/pdf-icon.png')" alt="" />
+            <img [src]="sanitize('./assets/pdf-icon.png')" alt="" />
           </div>
           <p>{{ file.name }}</p>
         </div>

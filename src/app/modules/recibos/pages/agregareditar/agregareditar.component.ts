@@ -10,8 +10,6 @@ import {Router,ActivatedRoute} from "@angular/router"
 })
 export class AgregareditarComponent implements OnInit {
 
-
-
   gruposRecibo:IGrupoReciboResponse[]//DATABASE
   constructor(
     private router:Router,
