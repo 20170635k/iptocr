@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 import { DragdropfilesComponent } from './components/dragdropfiles/dragdropfiles.component';
 import { ArchivomodalComponent } from './components/archivomodal/archivomodal.component';
 import { ConfirmationmodalComponent } from './components/confirmationmodal/confirmationmodal.component';
-
-
+import { SubirGrupoModalComponent } from './components/subirgrupomodal/subirgrupomodal/subirgrupomodal.component';
+import { SGConfirmacionModalComponent } from './components/subirgrupomodal/confirmacionModal/sgconfirmacionmodal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,9 @@ import { ConfirmationmodalComponent } from './components/confirmationmodal/confi
     ListarComponent,
     DragdropfilesComponent,
     ArchivomodalComponent,
-    ConfirmationmodalComponent
+    ConfirmationmodalComponent, 
+    SubirGrupoModalComponent, 
+    SGConfirmacionModalComponent
   ],
   imports: [
     CommonModule,

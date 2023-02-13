@@ -11,15 +11,15 @@ import { ConfirmationModalService } from '../confirmationmodal/confirmationmodal
   styleUrls: ['./archivomodal.component.scss']
 })
 export class ArchivomodalComponent implements OnInit {
-  
+  files:File[];
   thisDisplay$: Observable<'open' | 'close'>;
-
+  confirmed: boolean = false;
 
   constructor(private router:Router,
     private activatedRoute:ActivatedRoute,
     private modalService: ModalService,
     private confirmationService: ConfirmationModalService) { 
-
+      this.files = [];
     }
 
   ngOnInit(): void {
@@ -27,10 +27,12 @@ export class ArchivomodalComponent implements OnInit {
   }
 
   close(): void {  
+    this.confirmationService.close();
     this.modalService.close();
   }
 
   upload(): void {
+    
     this.confirmationService.open();
     
   }

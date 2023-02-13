@@ -1,0 +1,20 @@
+<ng-container *ngIf="thisDisplay$ | async as display">
+    <section [class.open]="display === 'open'"
+             (click)="close()">
+      <div (click)="$event.stopPropagation()">
+        <button class="close"
+                type="button" 
+                (click)="close()">X</button>
+        ¿Está seguro que desea subir el grupo de recibos?
+        <div></div>
+        Luego podra agregar más recibos en la carpeta
+        <div></div>
+        <button (click)="close()">
+          No, aun no
+        </button>
+        <button (click)="upload()">Sí, seguro</button>
+      </div>
+      <app-sgconfirmacionmodal></app-sgconfirmacionmodal>
+    </section>
+  </ng-container>
+  

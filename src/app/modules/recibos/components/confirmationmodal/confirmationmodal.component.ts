@@ -27,10 +27,13 @@ export class ConfirmationmodalComponent implements OnInit {
   }
 
   close(): void {
+    this.modalService.close()
     this.parentModal.close()  
   }
 
   upload(): void{
-    this.parentModal.close()
+    this.modalService.close()
+    this.parentModal.close() 
+    
   }
 }

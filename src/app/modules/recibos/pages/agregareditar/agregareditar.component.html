@@ -5,7 +5,7 @@
     <div class="title">Recibos Subidos</div>
     <div class="actions">
       <button class="action export csv" (click)="open()">Subir Recibos </button>
-      <button class="action add receipts">Subir Grupo</button>
+      <button class="action add receipts" (click)="subirgrupo()">Subir Grupo</button>
     </div>
   </div>
   <div class="element table">
@@ -36,4 +36,5 @@
   </div>
 </div>
 <app-archivomodal></app-archivomodal>
+<app-subirgrupomodal></app-subirgrupomodal>
 

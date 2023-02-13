@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {  IReciboResponse } from 'src/app/interfaces/recibo.interface';
 import {Router,ActivatedRoute} from "@angular/router"
 import { ModalService } from '../../components/archivomodal/modal.service';
+import { SGModalService } from '../../components/subirgrupomodal/subirgrupomodal/sgmodal.service';
 
 @Component({
   selector: 'app-agregareditar',
@@ -15,8 +16,9 @@ export class AgregareditarComponent implements OnInit {
   constructor(
     private router:Router,
     private activatedRoute:ActivatedRoute, 
-    private modalService: ModalService
-  ) {
+    private modalService: ModalService,
+    private sgmodal: SGModalService)
+   {
     this.gruposRecibo = [
       {
         id:1,
@@ -66,5 +68,7 @@ export class AgregareditarComponent implements OnInit {
   open() {
     this.modalService.open();
   }
-
+  subirgrupo() {
+    this.sgmodal.open()
+  }
 }
